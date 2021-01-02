@@ -10,6 +10,31 @@ import Foundation
 import CoreLocation
 import PromiseKit
 
-func getCoordinateFrom(address: String, completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
-    CLGeocoder().geocodeAddressString(address) { completion($0?.first?.location?.coordinate, $1) }
+func getCoordinateFrom(address: String) -> Promise<CLLocationCoordinate2D> {
+    
+    return Promise { seal in
+        CLGeocoder().geocodeAddressString(address, completionHandler: { (placemarks, error) -> Void in
+            if let error = error {
+                seal.reject(error)
+            }
+            if let placemark = placemarks?.first {
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                seal.fulfill(coordinates)
+            }
+        })
+        
+    }
 }
+//}
+//
+//func getCoordinateFrom(address: String) {
+//
+//CLGeocoder().geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
+//if((error) != nil){
+//   print("Error", error)
+//}
+//if let placemark = placemarks?.first {
+//   let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+//   }
+// })
+//}
