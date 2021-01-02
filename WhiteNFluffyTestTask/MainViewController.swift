@@ -11,12 +11,14 @@ import PromiseKit
 
 class MainViewController: UIViewController {
     
-    var cities = ["Москва", "Казань", "Краснодар", "Вологда", "Пермь", "Самара", "Севастополь", "Киев", "Орел", "Минск"]
+    var cityNames = ["Москва", "Казань", "Краснодар", "Вологда", "Пермь", "Самара", "Севастополь", "Киев", "Орел", "Минск"]
+    
+    var weatherItems = [WeatherItem]()
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.delegate = self
-        searchBar.placeholder = "Введите город..."
+        searchBar.placeholder = "Укажите город..."
         
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         return searchBar
@@ -33,15 +35,25 @@ class MainViewController: UIViewController {
     }()
     
     let weatherService = WeatherService()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
-        weatherService.getWeatherWithCityName(cityName: "Москва").done { response in
-            debugPrint("\(response)")
-        }
+        //        weatherService.getWeatherByCityName(cityName: "Москва").done { response in
+        //            debugPrint("\(response)")
+        //        }
+        cityNames.forEach({
+            let cityName = $0
+            weatherService.getWeatherByCityName(cityName: cityName)
+                .done { response in
+                    self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
+            }.catch { error in
+                debugPrint(error.localizedDescription)
+            }
+        })
+        
     }
-
+    
 }
 
 extension MainViewController: UISearchBarDelegate {
@@ -51,12 +63,13 @@ extension MainViewController: UISearchBarDelegate {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        weatherItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MainTableViewCell.self), for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
-        let city = cities[indexPath.row]
-        cell.configure(city: String)
+        let weatherItem = weatherItems[indexPath.row]
+        cell.configure(weatherItem: weatherItem)
         return cell
     }
     

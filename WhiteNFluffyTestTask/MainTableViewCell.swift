@@ -57,9 +57,9 @@ class MainTableViewCell: UITableViewCell {
     }
     
     func configure(weatherItem: WeatherItem) {
-        cityNameLabel.text = weatherItem.fact.icon
-        temperatureLabel.text = "\(weatherItem.fact.temp)"
-        weatherIcon.sd_setImage(with: URL(string: "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.fact.icon).svg"), placeholderImage: UIImage(named: "placeholder.png"))
+        cityNameLabel.text = weatherItem.name
+        temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temp)"
+        weatherIcon.sd_setImage(with: URL(string: "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"), placeholderImage: UIImage(named: "placeholder.png"))
 
     }
     
