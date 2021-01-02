@@ -11,9 +11,11 @@ import PromiseKit
 
 class MainViewController: UIViewController {
     
-    var cityNames = ["Краснодар"
-        , "Вологда"
-//        , "Пермь", "Самара", "Севастополь", "Киев", "Орел", "Минск", "Москва", "Казань"
+    var cityNames = [
+        "Вологда",
+//         "Пермь",
+        "Самара",
+        "Севастополь", "Киев", "Орел", "Минск", "Москва", "Казань"
     ]
     
     var weatherItems = [WeatherItem]()
@@ -52,6 +54,7 @@ class MainViewController: UIViewController {
                 .done { response in
                     self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
                     debugPrint(response)
+                    DispatchQueue.main.async { self.tableView.reloadData() }
             }.catch { error in
                 debugPrint(error.localizedDescription)
             }
@@ -87,7 +90,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MainTableViewCell.self), for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseId, for: indexPath) as! MainTableViewCell
         let weatherItem = weatherItems[indexPath.row]
         cell.configure(weatherItem: weatherItem)
         return cell
