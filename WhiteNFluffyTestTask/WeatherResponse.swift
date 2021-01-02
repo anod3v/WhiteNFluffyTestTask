@@ -13,7 +13,7 @@ struct WeatherResponse: Codable {
     let now: Int
     let nowDt: String
     let info: Info
-    let geoObject: GeoObject
+//    let geoObject: GeoObject
     let yesterday: Yesterday
     let fact: Fact
     let forecasts: [Forecast]
@@ -22,7 +22,7 @@ struct WeatherResponse: Codable {
         case now
         case nowDt = "now_dt"
         case info
-        case geoObject = "geo_object"
+//        case geoObject = "geo_object"
         case yesterday, fact, forecasts
     }
 }
@@ -32,16 +32,16 @@ struct Fact: Codable {
     let obsTime, uptime, temp, feelsLike: Int
     let icon: Icon
     let condition: Condition
-    let cloudness, precType, precProb: Int
-    let precStrength: Double
+//    let phenomIcon, phenomCondition: String
+//    let cloudness, precType, precProb, precStrength: Int
     let isThunder: Bool
-    let windSpeed: Double
+    let windSpeed: Int
     let windDir: WindDir
     let pressureMm, pressurePa, humidity: Int
     let daytime: Daytime
     let polar: Bool
     let season, source: String
-    let accumPrec: [String: Double]
+//    let accumPrec: [String: Double]
     let soilMoisture: Double
     let soilTemp, uvIndex: Int
     let windGust: Double
@@ -50,17 +50,20 @@ struct Fact: Codable {
         case obsTime = "obs_time"
         case uptime, temp
         case feelsLike = "feels_like"
-        case icon, condition, cloudness
-        case precType = "prec_type"
-        case precProb = "prec_prob"
-        case precStrength = "prec_strength"
+        case icon, condition
+//        case phenomIcon = "phenom_icon"
+//        case phenomCondition = "phenom_condition"
+//        case cloudness
+//        case precType = "prec_type"
+//        case precProb = "prec_prob"
+//        case precStrength = "prec_strength"
         case isThunder = "is_thunder"
         case windSpeed = "wind_speed"
         case windDir = "wind_dir"
         case pressureMm = "pressure_mm"
         case pressurePa = "pressure_pa"
         case humidity, daytime, polar, season, source
-        case accumPrec = "accum_prec"
+//        case accumPrec = "accum_prec"
         case soilMoisture = "soil_moisture"
         case soilTemp = "soil_temp"
         case uvIndex = "uv_index"
@@ -81,10 +84,13 @@ enum Daytime: String, Codable {
 }
 
 enum Icon: String, Codable {
-    case iconOvcSn = "ovc_sn"
+    case bknSnD = "bkn_sn_d"
+    case iconBknSnD = "bkn_+sn_d"
+    case iconOvcSn = "ovc_-sn"
     case ovc = "ovc"
     case ovcRaSn = "ovc_ra_sn"
-    case ovcSn = "ovc_-sn"
+    case ovcSn = "ovc_+sn"
+    case purpleOvcSn = "ovc_sn"
 }
 
 enum WindDir: String, Codable {
@@ -92,6 +98,7 @@ enum WindDir: String, Codable {
     case s = "s"
     case se = "se"
     case sw = "sw"
+    case w = "w"
 }
 
 // MARK: - Forecast
@@ -101,9 +108,9 @@ struct Forecast: Codable {
     let sunrise, sunset, riseBegin, setEnd: String
     let moonCode: Int
     let moonText: String
-    let parts: Parts
-    let hours: [Hour]
-    let biomet: Biomet?
+//    let parts: Parts
+//    let hours: [Hour]
+//    let biomet: Biomet?
 
     enum CodingKeys: String, CodingKey {
         case date
@@ -113,7 +120,7 @@ struct Forecast: Codable {
         case setEnd = "set_end"
         case moonCode = "moon_code"
         case moonText = "moon_text"
-        case parts, hours, biomet
+//        case parts, hours, biomet
     }
 }
 
@@ -124,79 +131,80 @@ struct Biomet: Codable {
 }
 
 // MARK: - Hour
-struct Hour: Codable {
-    let hour: String?
-    let hourTs, temp: Int?
-    let feelsLike: Int
-    let icon: Icon
-    let condition: Condition
-    let cloudness, precType: Int
-    let precStrength: Double
-    let isThunder: Bool?
-    let windDir: WindDir
-    let windSpeed, windGust: Double
-    let pressureMm, pressurePa, humidity: Int
-    let uvIndex: Int?
-    let soilTemp: Int
-    let soilMoisture, precMm: Double
-    let precPeriod, precProb: Int
-    let source: String?
-    let tempMin, tempAvg, tempMax: Int?
-    let daytime: Daytime?
-    let polar: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case hour
-        case hourTs = "hour_ts"
-        case temp
-        case feelsLike = "feels_like"
-        case icon, condition, cloudness
-        case precType = "prec_type"
-        case precStrength = "prec_strength"
-        case isThunder = "is_thunder"
-        case windDir = "wind_dir"
-        case windSpeed = "wind_speed"
-        case windGust = "wind_gust"
-        case pressureMm = "pressure_mm"
-        case pressurePa = "pressure_pa"
-        case humidity
-        case uvIndex = "uv_index"
-        case soilTemp = "soil_temp"
-        case soilMoisture = "soil_moisture"
-        case precMm = "prec_mm"
-        case precPeriod = "prec_period"
-        case precProb = "prec_prob"
-        case source = "_source"
-        case tempMin = "temp_min"
-        case tempAvg = "temp_avg"
-        case tempMax = "temp_max"
-        case daytime, polar
-    }
-}
+//struct Hour: Codable {
+//    let hour: String?
+//    let hourTs, temp: Int?
+//    let feelsLike: Int
+//    let icon: Icon
+//    let condition: Condition
+//    let cloudness: Double
+//    let precType: Int
+//    let precStrength: Double
+//    let isThunder: Bool?
+//    let windDir: WindDir
+//    let windSpeed, windGust: Double
+//    let pressureMm, pressurePa, humidity: Int
+//    let uvIndex: Int?
+//    let soilTemp: Int
+//    let soilMoisture, precMm: Double
+//    let precPeriod, precProb: Int
+//    let source: String?
+//    let tempMin, tempAvg, tempMax: Int?
+//    let daytime: Daytime?
+//    let polar: Bool?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case hour
+//        case hourTs = "hour_ts"
+//        case temp
+//        case feelsLike = "feels_like"
+//        case icon, condition, cloudness
+//        case precType = "prec_type"
+//        case precStrength = "prec_strength"
+//        case isThunder = "is_thunder"
+//        case windDir = "wind_dir"
+//        case windSpeed = "wind_speed"
+//        case windGust = "wind_gust"
+//        case pressureMm = "pressure_mm"
+//        case pressurePa = "pressure_pa"
+//        case humidity
+//        case uvIndex = "uv_index"
+//        case soilTemp = "soil_temp"
+//        case soilMoisture = "soil_moisture"
+//        case precMm = "prec_mm"
+//        case precPeriod = "prec_period"
+//        case precProb = "prec_prob"
+//        case source = "_source"
+//        case tempMin = "temp_min"
+//        case tempAvg = "temp_avg"
+//        case tempMax = "temp_max"
+//        case daytime, polar
+//    }
+//}
 
 // MARK: - Parts
-struct Parts: Codable {
-    let nightShort, dayShort, night, day: Hour
-    let evening, morning: Hour
-
-    enum CodingKeys: String, CodingKey {
-        case nightShort = "night_short"
-        case dayShort = "day_short"
-        case night, day, evening, morning
-    }
-}
+//struct Parts: Codable {
+//    let evening, morning, nightShort, dayShort: Hour
+//    let night, day: Hour
+//
+//    enum CodingKeys: String, CodingKey {
+//        case evening, morning
+//        case nightShort = "night_short"
+//        case dayShort = "day_short"
+//        case night, day
+//    }
+//}
 
 // MARK: - GeoObject
-struct GeoObject: Codable {
-    let district: JSONNull?
-    let locality, province, country: Country
-}
+//struct GeoObject: Codable {
+//    let district, locality, province, country: Country
+//}
 
 // MARK: - Country
-struct Country: Codable {
-    let id: Int
-    let name: String
-}
+//struct Country: Codable {
+//    let id: Int
+//    let name: String
+//}
 
 // MARK: - Info
 struct Info: Codable {
@@ -230,31 +238,4 @@ struct Tzinfo: Codable {
 // MARK: - Yesterday
 struct Yesterday: Codable {
     let temp: Int
-}
-
-// MARK: - Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
 }

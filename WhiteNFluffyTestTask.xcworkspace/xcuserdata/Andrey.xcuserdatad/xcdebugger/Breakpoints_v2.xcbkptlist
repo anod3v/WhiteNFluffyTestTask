@@ -7,49 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6E7CA6C9-DC3E-4B85-8D23-6706055144CC"
+            uuid = "791FDC9A-9EBD-43E3-AE47-B97C97D19064"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhiteNFluffyTestTask/MainViewController.swift"
+            filePath = "WhiteNFluffyTestTask/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "makeRequest(method:queryItems:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6E7CA6C9-DC3E-4B85-8D23-6706055144CC - 9f6b1fe9a61bc99a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (WhiteNFluffyTestTask.WeatherResponse) -&gt; () in closure #1 (Swift.String) -&gt; () in WhiteNFluffyTestTask.MainViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "WhiteNFluffyTestTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/!.%20TestTasks/2.%20WhiteNFluffy/git/WhiteNFluffyTestTask/WhiteNFluffyTestTask/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "799">
-               </Location>
-               <Location
-                  uuid = "6E7CA6C9-DC3E-4B85-8D23-6706055144CC - 191fb9f9c859c772"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (WhiteNFluffyTestTask.WeatherResponse) -&gt; () in closure #1 (Swift.String) -&gt; () in WhiteNFluffyTestTask.MainViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "WhiteNFluffyTestTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/!.%20TestTasks/2.%20WhiteNFluffy/git/WhiteNFluffyTestTask/WhiteNFluffyTestTask/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
