@@ -10,19 +10,23 @@ import Foundation
 import CoreLocation
 import PromiseKit
 
-func getCoordinateFrom(address: String) -> Promise<CLLocationCoordinate2D> {
+class LocationService {
     
-    return Promise { seal in
-        CLGeocoder().geocodeAddressString(address, completionHandler: { (placemarks, error) -> Void in
-            if let error = error {
-                seal.reject(error)
-            }
-            if let placemark = placemarks?.first {
-                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-                seal.fulfill(coordinates)
-            }
-        })
+    func getCoordinateFrom(address: String) -> Promise<CLLocationCoordinate2D> {
         
+        return Promise { seal in
+            CLGeocoder().geocodeAddressString(address, completionHandler: { (placemarks, error) -> Void in
+                if let error = error {
+                    seal.reject(error)
+                    debugPrint(error)
+                }
+                if let placemark = placemarks?.first {
+                    let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                    seal.fulfill(coordinates)
+                }
+            })
+            
+        }
     }
 }
 //}

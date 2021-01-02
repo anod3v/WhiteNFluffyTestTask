@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C07CED93-4215-485C-8F51-1F44DBDB8B78"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D95B4809-2A76-4203-9E09-D36B4845D738"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhiteNFluffyTestTask/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "makeRequest(method:queryItems:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D95B4809-2A76-4203-9E09-D36B4845D738 - b9412b7c941165f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WhiteNFluffyTestTask.NetworkService.makeRequest&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(method: Swift.String, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; PromiseKit.Promise&lt;A&gt;"
+                  moduleName = "WhiteNFluffyTestTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/!.%20TestTasks/2.%20WhiteNFluffy/git/WhiteNFluffyTestTask/WhiteNFluffyTestTask/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "2018">
+               </Location>
+               <Location
+                  uuid = "D95B4809-2A76-4203-9E09-D36B4845D738 - 781ace23ac95a81d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PromiseKit.Resolver&lt;A&gt;) -&gt; () in WhiteNFluffyTestTask.NetworkService.makeRequest&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(method: Swift.String, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; PromiseKit.Promise&lt;A&gt;"
+                  moduleName = "WhiteNFluffyTestTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/!.%20TestTasks/2.%20WhiteNFluffy/git/WhiteNFluffyTestTask/WhiteNFluffyTestTask/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "145">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

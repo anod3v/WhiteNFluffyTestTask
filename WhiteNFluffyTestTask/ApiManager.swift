@@ -7,23 +7,11 @@
 //
 
 import Foundation
-import SwiftKeychainWrapper
 
 class ApiManager {
     static let session = ApiManager()
     
-    var accessKey: String {
-        get {
-            KeychainWrapper.standard.string(forKey: "vk-api-key") ?? ""
-        }
-        set {
-            KeychainWrapper.standard.set(newValue, forKey: "vk-api-key")
-        }
-    }
-    
-    func eraseAll() {
-        KeychainWrapper.standard.removeAllKeys()
-    }
+    var accessKey: String = "84735fc4-4adc-4bac-8cee-aecbe1086c06"
     
     private init() {}
     
