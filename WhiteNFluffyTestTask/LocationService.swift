@@ -23,6 +23,7 @@ class LocationService {
                 if let placemark = placemarks?.first {
                     let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
                     seal.fulfill(coordinates)
+                    debugPrint(coordinates)
                 }
             })
             

@@ -11,7 +11,10 @@ import PromiseKit
 
 class MainViewController: UIViewController {
     
-    var cityNames = ["Москва", "Казань", "Краснодар", "Вологда", "Пермь", "Самара", "Севастополь", "Киев", "Орел", "Минск"]
+    var cityNames = ["Краснодар"
+        , "Вологда"
+//        , "Пермь", "Самара", "Севастополь", "Киев", "Орел", "Минск", "Москва", "Казань"
+    ]
     
     var weatherItems = [WeatherItem]()
     
@@ -39,6 +42,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
+        setupTableView()
         //        weatherService.getWeatherByCityName(cityName: "Москва").done { response in
         //            debugPrint("\(response)")
         //        }
@@ -47,11 +51,27 @@ class MainViewController: UIViewController {
             weatherService.getWeatherByCityName(cityName: cityName)
                 .done { response in
                     self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
+                    debugPrint(response)
             }.catch { error in
                 debugPrint(error.localizedDescription)
             }
         })
         
+    }
+    
+    func setupTableView() {
+        self.view.addSubview(tableView)
+        updateConstraints()
+    }
+    
+    func updateConstraints() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+        ])
+
     }
     
 }

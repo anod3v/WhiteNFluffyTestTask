@@ -15,7 +15,7 @@ class WeatherService: NetworkService {
     let locationService = LocationService()
     
     private func getWeatherByCityLocation(coordinate: CLLocationCoordinate2D) -> Promise<WeatherResponse> {
-        return self.makeRequest(method: "informers", queryItems: [
+        return self.makeRequest(method: "forecast", queryItems: [
             .init(name: "lat", value: "\(coordinate.latitude)"),
             .init(name: "lon", value: "\(coordinate.longitude)")
         ])
