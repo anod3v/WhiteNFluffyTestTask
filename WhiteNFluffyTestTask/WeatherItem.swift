@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Welcome
-struct WeatherResponse: Codable {
+struct WeatherItem: Codable {
     let now: Int
     let nowDt: String
     let info: Info

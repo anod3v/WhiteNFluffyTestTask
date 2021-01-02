@@ -7,35 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		398A043D6C04C24BB4F5E102 /* Pods_WhiteNFluffyTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B139C0470EB189B200D607A /* Pods_WhiteNFluffyTestTask.framework */; };
 		55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F725A0646300F8F350 /* AppDelegate.swift */; };
 		55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F925A0646300F8F350 /* SceneDelegate.swift */; };
-		55EF74FC25A0646300F8F350 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74FB25A0646300F8F350 /* ViewController.swift */; };
+		55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74FB25A0646300F8F350 /* MainViewController.swift */; };
 		55EF750125A0646500F8F350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EF750025A0646500F8F350 /* Assets.xcassets */; };
 		55EF750425A0646500F8F350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF750225A0646500F8F350 /* LaunchScreen.storyboard */; };
 		55EF750D25A06AB800F8F350 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF750C25A06AB800F8F350 /* NetworkService.swift */; };
 		55EF750F25A06D9A00F8F350 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF750E25A06D9A00F8F350 /* ApiManager.swift */; };
 		55EF751125A0772200F8F350 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF751025A0772200F8F350 /* LocationService.swift */; };
-		55EF751525A08C5400F8F350 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF751425A08C5400F8F350 /* WeatherResponse.swift */; };
+		55EF751525A08C5400F8F350 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF751425A08C5400F8F350 /* WeatherItem.swift */; };
 		55EF751725A090CB00F8F350 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF751625A090CB00F8F350 /* WeatherService.swift */; };
-		65C3027B20A9DC81127FDD17 /* Pods_WhiteNFluffyTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F3D7AFC51D9ECE9E92272F /* Pods_WhiteNFluffyTestTask.framework */; };
+		55EF751925A0B02000F8F350 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF751825A0B02000F8F350 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B139C0470EB189B200D607A /* Pods_WhiteNFluffyTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteNFluffyTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15DBECB5CF6797ABA8C67C59 /* Pods-WhiteNFluffyTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteNFluffyTestTask.debug.xcconfig"; path = "Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		55EF74F425A0646300F8F350 /* WhiteNFluffyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteNFluffyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF74F725A0646300F8F350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55EF74F925A0646300F8F350 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55EF74FB25A0646300F8F350 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55EF74FB25A0646300F8F350 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		55EF750025A0646500F8F350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55EF750325A0646500F8F350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55EF750525A0646500F8F350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55EF750C25A06AB800F8F350 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		55EF750E25A06D9A00F8F350 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		55EF751025A0772200F8F350 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
-		55EF751425A08C5400F8F350 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		55EF751425A08C5400F8F350 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
 		55EF751625A090CB00F8F350 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
-		57F3D7AFC51D9ECE9E92272F /* Pods_WhiteNFluffyTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteNFluffyTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1B3A7DFDA79C4F8518D5151 /* Pods-WhiteNFluffyTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteNFluffyTestTask.release.xcconfig"; path = "Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask.release.xcconfig"; sourceTree = "<group>"; };
-		AD20E7011111B0754EBCA2FA /* Pods-WhiteNFluffyTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteNFluffyTestTask.debug.xcconfig"; path = "Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		55EF751825A0B02000F8F350 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		6F807FE7D56A9FA3F460E6F9 /* Pods-WhiteNFluffyTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteNFluffyTestTask.release.xcconfig"; path = "Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65C3027B20A9DC81127FDD17 /* Pods_WhiteNFluffyTestTask.framework in Frameworks */,
+				398A043D6C04C24BB4F5E102 /* Pods_WhiteNFluffyTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,10 +55,18 @@
 		2D59FF1BC578D8C2199EF1B5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD20E7011111B0754EBCA2FA /* Pods-WhiteNFluffyTestTask.debug.xcconfig */,
-				A1B3A7DFDA79C4F8518D5151 /* Pods-WhiteNFluffyTestTask.release.xcconfig */,
+				15DBECB5CF6797ABA8C67C59 /* Pods-WhiteNFluffyTestTask.debug.xcconfig */,
+				6F807FE7D56A9FA3F460E6F9 /* Pods-WhiteNFluffyTestTask.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2EB86EEFA92B7E48F31B0736 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B139C0470EB189B200D607A /* Pods_WhiteNFluffyTestTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		55EF74EB25A0646300F8F350 = {
@@ -65,7 +75,7 @@
 				55EF74F625A0646300F8F350 /* WhiteNFluffyTestTask */,
 				55EF74F525A0646300F8F350 /* Products */,
 				2D59FF1BC578D8C2199EF1B5 /* Pods */,
-				AC05DE59477010A55CA6F252 /* Frameworks */,
+				2EB86EEFA92B7E48F31B0736 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				55EF750B25A0679D00F8F350 /* SupportingFiles */,
-				55EF74FB25A0646300F8F350 /* ViewController.swift */,
+				55EF74FB25A0646300F8F350 /* MainViewController.swift */,
+				55EF751825A0B02000F8F350 /* MainTableViewCell.swift */,
 				55EF750C25A06AB800F8F350 /* NetworkService.swift */,
 				55EF750E25A06D9A00F8F350 /* ApiManager.swift */,
-				55EF751425A08C5400F8F350 /* WeatherResponse.swift */,
+				55EF751425A08C5400F8F350 /* WeatherItem.swift */,
 				55EF751625A090CB00F8F350 /* WeatherService.swift */,
 				55EF751025A0772200F8F350 /* LocationService.swift */,
 			);
@@ -103,14 +114,6 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		AC05DE59477010A55CA6F252 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				57F3D7AFC51D9ECE9E92272F /* Pods_WhiteNFluffyTestTask.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,11 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55EF750825A0646500F8F350 /* Build configuration list for PBXNativeTarget "WhiteNFluffyTestTask" */;
 			buildPhases = (
-				259E5918765368FF8E915CBF /* [CP] Check Pods Manifest.lock */,
+				A9DDBE6C48075BF972FA2CC9 /* [CP] Check Pods Manifest.lock */,
 				55EF74F025A0646300F8F350 /* Sources */,
 				55EF74F125A0646300F8F350 /* Frameworks */,
 				55EF74F225A0646300F8F350 /* Resources */,
-				B96D82F62B28264CB2D59069 /* [CP] Embed Pods Frameworks */,
+				9A34D810FF3930A4D8BB1D21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,7 +182,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		259E5918765368FF8E915CBF /* [CP] Check Pods Manifest.lock */ = {
+		9A34D810FF3930A4D8BB1D21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9DDBE6C48075BF972FA2CC9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,23 +221,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B96D82F62B28264CB2D59069 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -226,13 +229,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				55EF751725A090CB00F8F350 /* WeatherService.swift in Sources */,
-				55EF74FC25A0646300F8F350 /* ViewController.swift in Sources */,
+				55EF751925A0B02000F8F350 /* MainTableViewCell.swift in Sources */,
+				55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */,
 				55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */,
 				55EF750F25A06D9A00F8F350 /* ApiManager.swift in Sources */,
 				55EF750D25A06AB800F8F350 /* NetworkService.swift in Sources */,
 				55EF751125A0772200F8F350 /* LocationService.swift in Sources */,
 				55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */,
-				55EF751525A08C5400F8F350 /* WeatherResponse.swift in Sources */,
+				55EF751525A08C5400F8F350 /* WeatherItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +370,7 @@
 		};
 		55EF750925A0646500F8F350 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD20E7011111B0754EBCA2FA /* Pods-WhiteNFluffyTestTask.debug.xcconfig */;
+			baseConfigurationReference = 15DBECB5CF6797ABA8C67C59 /* Pods-WhiteNFluffyTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,7 +389,7 @@
 		};
 		55EF750A25A0646500F8F350 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1B3A7DFDA79C4F8518D5151 /* Pods-WhiteNFluffyTestTask.release.xcconfig */;
+			baseConfigurationReference = 6F807FE7D56A9FA3F460E6F9 /* Pods-WhiteNFluffyTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

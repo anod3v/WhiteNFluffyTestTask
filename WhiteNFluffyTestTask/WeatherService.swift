@@ -14,17 +14,17 @@ class WeatherService: NetworkService {
     
     let locationService = LocationService()
     
-    private func getWeatherWithCityLocation(coordinate: CLLocationCoordinate2D) -> Promise<WeatherResponse> {
+    private func getWeatherWithCityLocation(coordinate: CLLocationCoordinate2D) -> Promise<WeatherItem> {
         return self.makeRequest(method: "informers", queryItems: [
             .init(name: "lat", value: "\(coordinate.latitude)"),
             .init(name: "lon", value: "\(coordinate.longitude)")
         ])
     }
     
-    func getWeatherWithCityName(cityName: String) -> Promise<WeatherResponse> {
+    func getWeatherWithCityName(cityName: String) -> Promise<WeatherItem> {
         firstly{
         locationService.getCoordinateFrom(address: cityName)
-        }.then { location -> Promise<WeatherResponse> in
+        }.then { location -> Promise<WeatherItem> in
             self.getWeatherWithCityLocation(coordinate: location)
         }
     }

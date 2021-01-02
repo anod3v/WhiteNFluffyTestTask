@@ -8,21 +8,27 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
+  - SDWebImage/Core (5.10.2)
+  - SDWebImage/MapKit (5.10.2):
+    - SDWebImage/Core
   - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
   - PromiseKit (~> 6.8)
+  - SDWebImage/MapKit
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
     - PromiseKit
+    - SDWebImage
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: 95946a8bdd0b03caad2b61adc22aaae110a21f4c
+PODFILE CHECKSUM: 86dad2eabb7e872fdec19beaa0fd67975c587de8
 
 COCOAPODS: 1.9.3

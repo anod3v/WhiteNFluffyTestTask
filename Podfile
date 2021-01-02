@@ -11,4 +11,6 @@ pod 'SwiftKeychainWrapper'
 
 pod "PromiseKit", "~> 6.8"
 
+pod 'SDWebImage/MapKit'
+
 end
