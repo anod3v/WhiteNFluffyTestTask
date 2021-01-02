@@ -13,8 +13,8 @@ class MainViewController: UIViewController {
     
     var cityNames = [
         "Вологда",
-//         "Пермь",
-//        "Самара",
+         "Пермь",
+        "Самара",
 //        "Севастополь",
 //        "Киев",
 //        "Орел",
@@ -69,6 +69,8 @@ class MainViewController: UIViewController {
     
     func setupTableView() {
         self.view.addSubview(tableView)
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
         updateConstraints()
     }
     

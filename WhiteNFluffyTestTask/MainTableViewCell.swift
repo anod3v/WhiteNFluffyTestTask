@@ -63,7 +63,6 @@ class MainTableViewCell: UITableViewCell {
         let iconURL = "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"
 //        let iconURL = "https://lh3.googleusercontent.com/i1ntSY7ACWnaxtdxI0KO9vHh0UNtXRin1YNnSVCpfmE5JH9752u4tFLyd-gWM9Hi-zyASAW8lYXnNvLfT7LHJUVJOgjAqbA74b0-m-UU8XdZSiFnTnYRADTmRVyXOiprgp0TsiGv=w2400"
         weatherIcon.sd_setImage(with: URL(string: iconURL), placeholderImage: UIImage(named: "placeholder.png"))
-//        weatherIcon.load(url: URL(string: iconURL)!)
 
     }
     
@@ -73,29 +72,18 @@ class MainTableViewCell: UITableViewCell {
             cityNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             cityNameLabel.widthAnchor.constraint(equalToConstant: 200),
+            cityNameLabel.heightAnchor.constraint(equalToConstant: 50),
             
             temperatureLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             temperatureLabel.widthAnchor.constraint(equalToConstant: 100),
+            temperatureLabel.heightAnchor.constraint(equalToConstant: 50),
             temperatureLabel.trailingAnchor.constraint(equalTo: weatherIcon.leadingAnchor, constant: -20),
             
             weatherIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             weatherIcon.widthAnchor.constraint(equalToConstant: 100),
             weatherIcon.heightAnchor.constraint(equalToConstant: 100),
             weatherIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            weatherIcon.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
-    }
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
     }
 }
