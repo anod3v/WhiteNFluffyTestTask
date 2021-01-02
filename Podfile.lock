@@ -1,0 +1,28 @@
+PODS:
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - SwiftKeychainWrapper (4.0.1)
+
+DEPENDENCIES:
+  - PromiseKit (~> 6.8)
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  trunk:
+    - PromiseKit
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+
+PODFILE CHECKSUM: 95946a8bdd0b03caad2b61adc22aaae110a21f4c
+
+COCOAPODS: 1.9.3
