@@ -13,9 +13,9 @@ class MainViewController: UIViewController {
     
     var cityNames = [
         "Вологда",
-         "Пермь",
-        "Самара",
-        "Севастополь",
+//         "Пермь",
+//        "Самара",
+//        "Севастополь",
 //        "Киев",
 //        "Орел",
 //        "Минск",
@@ -59,7 +59,7 @@ class MainViewController: UIViewController {
                 .done { response in
                     self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
                     debugPrint(response)
-                    DispatchQueue.main.async { self.tableView.reloadData() }
+                    DispatchQueue.main.async { self.tableView.reloadData() } // TODO: to provide with better solution
             }.catch { error in
                 debugPrint(error.localizedDescription)
             }

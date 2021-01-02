@@ -13,4 +13,6 @@ pod "PromiseKit", "~> 6.8"
 
 pod 'SDWebImage/MapKit'
 
+pod 'SDWebImageSVGCoder'
+
 end

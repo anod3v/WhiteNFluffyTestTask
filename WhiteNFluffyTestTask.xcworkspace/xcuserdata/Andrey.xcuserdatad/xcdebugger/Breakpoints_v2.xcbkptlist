@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "791FDC9A-9EBD-43E3-AE47-B97C97D19064"
+            uuid = "6A4E1820-ED62-4207-950F-F47906DF7D82"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhiteNFluffyTestTask/NetworkService.swift"
+            filePath = "WhiteNFluffyTestTask/MainTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "makeRequest(method:queryItems:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "configure(weatherItem:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

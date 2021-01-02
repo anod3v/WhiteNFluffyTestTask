@@ -60,7 +60,10 @@ class MainTableViewCell: UITableViewCell {
     func configure(weatherItem: WeatherItem) {
         cityNameLabel.text = weatherItem.name
         temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temp)"
-        weatherIcon.sd_setImage(with: URL(string: "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"), placeholderImage: UIImage(named: "placeholder.png"))
+        let iconURL = "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"
+//        let iconURL = "https://lh3.googleusercontent.com/i1ntSY7ACWnaxtdxI0KO9vHh0UNtXRin1YNnSVCpfmE5JH9752u4tFLyd-gWM9Hi-zyASAW8lYXnNvLfT7LHJUVJOgjAqbA74b0-m-UU8XdZSiFnTnYRADTmRVyXOiprgp0TsiGv=w2400"
+        weatherIcon.sd_setImage(with: URL(string: iconURL), placeholderImage: UIImage(named: "placeholder.png"))
+//        weatherIcon.load(url: URL(string: iconURL)!)
 
     }
     
@@ -77,8 +80,22 @@ class MainTableViewCell: UITableViewCell {
             
             weatherIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             weatherIcon.widthAnchor.constraint(equalToConstant: 100),
+            weatherIcon.heightAnchor.constraint(equalToConstant: 100),
             weatherIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
         ])
     }
-    
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }
