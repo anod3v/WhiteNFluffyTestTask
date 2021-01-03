@@ -123,8 +123,8 @@ extension MainViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        if let weatherItem = searchBar.text?.capitalized, !weatherItem.isEmpty {
-            prepareToShowFullSize(cityName: String)
+        if let cityName = searchBar.text?.capitalized, !cityName.isEmpty {
+            prepareToShowFullSize(cityName: cityName)
         }
     }
     
