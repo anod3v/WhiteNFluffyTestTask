@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
-        setupTableView()
+        setupViews()
         //        weatherService.getWeatherByCityName(cityName: "Москва").done { response in
         //            debugPrint("\(response)")
         //        }
@@ -67,8 +67,9 @@ class MainViewController: UIViewController {
         
     }
     
-    func setupTableView() {
+    func setupViews() {
         self.view.addSubview(tableView)
+        self.view.addSubview(searchBar)
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
         updateConstraints()
@@ -76,7 +77,11 @@ class MainViewController: UIViewController {
     
     func updateConstraints() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            searchBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
