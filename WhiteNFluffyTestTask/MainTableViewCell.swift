@@ -62,6 +62,7 @@ class MainTableViewCell: UITableViewCell {
     func configure(weatherItem: WeatherItem) {
         cityNameLabel.text = weatherItem.name
         temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temp)"
+        weatherIcon.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let iconURL = "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"
         weatherIcon.sd_setImage(with: URL(string: iconURL), placeholderImage: UIImage(named: "placeholder.png"))
 
