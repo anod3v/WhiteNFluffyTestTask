@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		398A043D6C04C24BB4F5E102 /* Pods_WhiteNFluffyTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B139C0470EB189B200D607A /* Pods_WhiteNFluffyTestTask.framework */; };
+		554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D325A15A7B0025E74A /* FullSizeViewController.swift */; };
 		55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F725A0646300F8F350 /* AppDelegate.swift */; };
 		55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F925A0646300F8F350 /* SceneDelegate.swift */; };
 		55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74FB25A0646300F8F350 /* MainViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0B139C0470EB189B200D607A /* Pods_WhiteNFluffyTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteNFluffyTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DBECB5CF6797ABA8C67C59 /* Pods-WhiteNFluffyTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteNFluffyTestTask.debug.xcconfig"; path = "Target Support Files/Pods-WhiteNFluffyTestTask/Pods-WhiteNFluffyTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		554760D325A15A7B0025E74A /* FullSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeViewController.swift; sourceTree = "<group>"; };
 		55EF74F425A0646300F8F350 /* WhiteNFluffyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteNFluffyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF74F725A0646300F8F350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55EF74F925A0646300F8F350 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				55EF750C25A06AB800F8F350 /* NetworkService.swift */,
 				55EF750E25A06D9A00F8F350 /* ApiManager.swift */,
 				55EF751425A08C5400F8F350 /* WeatherResponse.swift */,
+				554760D325A15A7B0025E74A /* FullSizeViewController.swift */,
 				55EF751C25A0D12E00F8F350 /* WeatherItem.swift */,
 				55EF751625A090CB00F8F350 /* WeatherService.swift */,
 				55EF751025A0772200F8F350 /* LocationService.swift */,
@@ -237,6 +240,7 @@
 				55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */,
 				55EF750F25A06D9A00F8F350 /* ApiManager.swift in Sources */,
 				55EF750D25A06AB800F8F350 /* NetworkService.swift in Sources */,
+				554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */,
 				55EF751125A0772200F8F350 /* LocationService.swift in Sources */,
 				55EF751D25A0D12E00F8F350 /* WeatherItem.swift in Sources */,
 				55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */,

@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.delegate = self
-        searchBar.placeholder = "Укажите город..."
+        searchBar.placeholder = "Поиск города"
         
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         return searchBar
@@ -67,6 +67,18 @@ class MainViewController: UIViewController {
         
     }
     
+    func prepareToShowFullSize(cityName: String) {
+        guard !cityNames.contains(cityName) else { return } // TODO: improve
+        weatherService.getWeatherByCityName(cityName: cityName)
+        .done { response in
+            let fullSizeViewController = FullSizeViewController()
+            fullSizeViewController.weatherItem = WeatherItem(name: cityName, weatherResponse: response)
+            DispatchQueue.main.async {
+                self.present(fullSizeViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
     func setupViews() {
         self.view.addSubview(tableView)
         self.view.addSubview(searchBar)
@@ -76,7 +88,7 @@ class MainViewController: UIViewController {
     }
     
     func updateConstraints() {
-        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate([ // TODO: add to the tableView header
             searchBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
@@ -88,10 +100,6 @@ class MainViewController: UIViewController {
         ])
 
     }
-    
-}
-
-extension MainViewController: UISearchBarDelegate {
     
 }
 
@@ -108,6 +116,27 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+}
+
+extension MainViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        if let weatherItem = searchBar.text?.capitalized, !weatherItem.isEmpty {
+            prepareToShowFullSize(cityName: String)
+        }
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
     
 }
 
