@@ -15,4 +15,10 @@ pod 'SDWebImage/MapKit'
 
 pod 'SDWebImageSVGCoder'
 
+source 'https://cdn.cocoapods.org/'
+platform :ios, '9.0'
+use_frameworks!
+
+pod 'PMAlertController'
+
 end
