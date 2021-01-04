@@ -65,6 +65,10 @@ class MainViewController: UIViewController {
             }
         })
         
+        weatherService.locationService.locationErrorCallback = { [weak self] locationError in
+        guard let self = self else { return }
+            AlertService.showLocationNotFoundAlert(viewController: self)
+    }
     }
     
     func prepareToShowFullSize(cityName: String) {

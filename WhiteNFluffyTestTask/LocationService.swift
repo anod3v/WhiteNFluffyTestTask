@@ -12,6 +12,8 @@ import PromiseKit
 
 class LocationService {
     
+    var locationErrorCallback: ((Error) -> Void)?
+    
     func getCoordinateFrom(address: String) -> Promise<CLLocationCoordinate2D> {
         
         return Promise { seal in
@@ -19,6 +21,9 @@ class LocationService {
                 if let error = error {
                     seal.reject(error)
                     debugPrint(error)
+                    if let callback = self.locationErrorCallback {
+                        callback(error)
+                    }
                 }
                 if let placemark = placemarks?.first {
                     let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
