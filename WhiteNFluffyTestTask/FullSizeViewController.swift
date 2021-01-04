@@ -61,15 +61,14 @@ class FullSizeViewController: UIViewController {
         return label
     }()
     
-    private(set) var weatherIcon: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.clipsToBounds = true
-        view.backgroundColor = .systemOrange
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private(set) var weatherIcon: RoundCornersImageView = {
+            let view = RoundCornersImageView(frame: .zero)
+    //        view.contentMode = .scaleAspectFill
+            view.backgroundColor = #colorLiteral(red: 1, green: 0.3864146769, blue: 0.4975627065, alpha: 1)
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.clipsToBounds = true
+            return view
+        }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

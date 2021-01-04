@@ -14,6 +14,7 @@
 		5519EEB025A39BF700D0D183 /* Exo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAD25A39AC900D0D183 /* Exo2-ExtraBold.ttf */; };
 		5519EEB125A39BFA00D0D183 /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */; };
 		5519EEB225A39BFD00D0D183 /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */; };
+		5519EEB425A3A03400D0D183 /* RoundCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */; };
 		554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D325A15A7B0025E74A /* FullSizeViewController.swift */; };
 		554760D625A359CB0025E74A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D525A359CB0025E74A /* AlertService.swift */; };
 		5554EA5525A3951C005A03FD /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554EA5425A3951C005A03FD /* UIConstants.swift */; };
@@ -36,6 +37,7 @@
 		5519EEAD25A39AC900D0D183 /* Exo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Regular.ttf"; sourceTree = "<group>"; };
+		5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersImageView.swift; sourceTree = "<group>"; };
 		554760D325A15A7B0025E74A /* FullSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeViewController.swift; sourceTree = "<group>"; };
 		554760D525A359CB0025E74A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		5554EA5025A39442005A03FD /* NotoSansTC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Bold.otf"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				55EF74FB25A0646300F8F350 /* MainViewController.swift */,
 				5554EA5425A3951C005A03FD /* UIConstants.swift */,
 				55EF751825A0B02000F8F350 /* MainTableViewCell.swift */,
+				5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */,
 				55EF750C25A06AB800F8F350 /* NetworkService.swift */,
 				55EF750E25A06D9A00F8F350 /* ApiManager.swift */,
 				55EF751425A08C5400F8F350 /* WeatherResponse.swift */,
@@ -284,6 +287,7 @@
 				55EF751D25A0D12E00F8F350 /* WeatherItem.swift in Sources */,
 				55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */,
 				554760D625A359CB0025E74A /* AlertService.swift in Sources */,
+				5519EEB425A3A03400D0D183 /* RoundCornersImageView.swift in Sources */,
 				55EF751525A08C5400F8F350 /* WeatherResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
