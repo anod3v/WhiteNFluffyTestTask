@@ -16,6 +16,7 @@
 		5519EEB225A39BFD00D0D183 /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */; };
 		5519EEB425A3A03400D0D183 /* RoundCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */; };
 		5519EEB925A3D3E900D0D183 /* CitiesListMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519EEB825A3D3E900D0D183 /* CitiesListMainView.swift */; };
+		5519EEBC25A3DED700D0D183 /* FullSizeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519EEBB25A3DED700D0D183 /* FullSizeMainView.swift */; };
 		554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D325A15A7B0025E74A /* FullSizeViewController.swift */; };
 		554760D625A359CB0025E74A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D525A359CB0025E74A /* AlertService.swift */; };
 		5554EA5525A3951C005A03FD /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554EA5425A3951C005A03FD /* UIConstants.swift */; };
@@ -40,6 +41,7 @@
 		5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Regular.ttf"; sourceTree = "<group>"; };
 		5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersImageView.swift; sourceTree = "<group>"; };
 		5519EEB825A3D3E900D0D183 /* CitiesListMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListMainView.swift; sourceTree = "<group>"; };
+		5519EEBB25A3DED700D0D183 /* FullSizeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeMainView.swift; sourceTree = "<group>"; };
 		554760D325A15A7B0025E74A /* FullSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeViewController.swift; sourceTree = "<group>"; };
 		554760D525A359CB0025E74A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		5554EA5025A39442005A03FD /* NotoSansTC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Bold.otf"; sourceTree = "<group>"; };
@@ -85,14 +87,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		5519EEB725A3D18000D0D183 /* ViewControllers */ = {
+		5519EEB725A3D18000D0D183 /* CitiesList */ = {
 			isa = PBXGroup;
 			children = (
 				55EF74FB25A0646300F8F350 /* CitiesListViewController.swift */,
 				5519EEB825A3D3E900D0D183 /* CitiesListMainView.swift */,
-				554760D325A15A7B0025E74A /* FullSizeViewController.swift */,
 			);
-			path = ViewControllers;
+			path = CitiesList;
+			sourceTree = "<group>";
+		};
+		5519EEBA25A3DCB100D0D183 /* FullSize */ = {
+			isa = PBXGroup;
+			children = (
+				554760D325A15A7B0025E74A /* FullSizeViewController.swift */,
+				5519EEBB25A3DED700D0D183 /* FullSizeMainView.swift */,
+			);
+			path = FullSize;
 			sourceTree = "<group>";
 		};
 		5554EA5325A3944D005A03FD /* Fonts */ = {
@@ -130,9 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				55EF750B25A0679D00F8F350 /* SupportingFiles */,
-				5519EEB725A3D18000D0D183 /* ViewControllers */,
-				5554EA5425A3951C005A03FD /* UIConstants.swift */,
+				5519EEB725A3D18000D0D183 /* CitiesList */,
+				5519EEBA25A3DCB100D0D183 /* FullSize */,
 				55EF751825A0B02000F8F350 /* MainTableViewCell.swift */,
+				5554EA5425A3951C005A03FD /* UIConstants.swift */,
 				5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */,
 				55EF750C25A06AB800F8F350 /* NetworkService.swift */,
 				55EF750E25A06D9A00F8F350 /* ApiManager.swift */,
@@ -301,6 +312,7 @@
 				554760D625A359CB0025E74A /* AlertService.swift in Sources */,
 				5519EEB425A3A03400D0D183 /* RoundCornersImageView.swift in Sources */,
 				55EF751525A08C5400F8F350 /* WeatherResponse.swift in Sources */,
+				5519EEBC25A3DED700D0D183 /* FullSizeMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
