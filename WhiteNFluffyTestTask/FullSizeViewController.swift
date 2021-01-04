@@ -15,6 +15,7 @@ class FullSizeViewController: UIViewController {
     
     private(set) var cityNameLabel: UILabel = {
         let label = UILabel()
+        label.font = Fonts.extraBoldOfSize18
         label.numberOfLines = 1
         label.sizeToFit()
         label.backgroundColor = .green
@@ -26,6 +27,7 @@ class FullSizeViewController: UIViewController {
     
     private(set) var temperatureLabel: UILabel = {
         let label = UILabel()
+        label.font = Fonts.semiBoldOfSize18
         label.numberOfLines = 1
         label.sizeToFit()
         label.backgroundColor = .green
@@ -37,6 +39,7 @@ class FullSizeViewController: UIViewController {
     
     private(set) var temperatureFeelsLikeLabel: UILabel = {
         let label = UILabel()
+        label.font = Fonts.regularOfSize18
         label.numberOfLines = 1
         label.sizeToFit()
         label.backgroundColor = .green
@@ -48,6 +51,7 @@ class FullSizeViewController: UIViewController {
     
     private(set) var humidityLabel: UILabel = {
         let label = UILabel()
+        label.font = Fonts.regularOfSize16
         label.numberOfLines = 1
         label.sizeToFit() // TODO: check if required
         label.backgroundColor = .green

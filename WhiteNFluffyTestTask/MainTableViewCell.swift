@@ -15,6 +15,7 @@ class MainTableViewCell: UITableViewCell {
     
     private(set) var cityNameLabel: UILabel = {
         let label = UILabel()
+        label.font = Fonts.extraBoldOfSize18
         label.numberOfLines = 1
         label.sizeToFit()
         label.backgroundColor = .green
@@ -25,6 +26,7 @@ class MainTableViewCell: UITableViewCell {
     
     private(set) var temperatureLabel: UILabel = {
         let label = UILabel()
+        label.font = Fonts.extraBoldOfSize18
         label.numberOfLines = 1
         label.backgroundColor = .cyan
         

@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		10BE7CCB653F520CAE689B63 /* Pods_WhiteNFluffyTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6D46025CD53436292EAE07 /* Pods_WhiteNFluffyTestTask.framework */; };
+		5519EEAA25A3990300D0D183 /* NotoSansTC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5554EA5225A39443005A03FD /* NotoSansTC-Regular.otf */; };
+		5519EEAB25A3990600D0D183 /* NotoSansTC-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5554EA5125A39443005A03FD /* NotoSansTC-ExtraBold.otf */; };
+		5519EEAC25A3990900D0D183 /* NotoSansTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5554EA5025A39442005A03FD /* NotoSansTC-Bold.otf */; };
+		5519EEB025A39BF700D0D183 /* Exo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAD25A39AC900D0D183 /* Exo2-ExtraBold.ttf */; };
+		5519EEB125A39BFA00D0D183 /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */; };
+		5519EEB225A39BFD00D0D183 /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */; };
 		554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D325A15A7B0025E74A /* FullSizeViewController.swift */; };
 		554760D625A359CB0025E74A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D525A359CB0025E74A /* AlertService.swift */; };
+		5554EA5525A3951C005A03FD /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554EA5425A3951C005A03FD /* UIConstants.swift */; };
 		55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F725A0646300F8F350 /* AppDelegate.swift */; };
 		55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F925A0646300F8F350 /* SceneDelegate.swift */; };
 		55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74FB25A0646300F8F350 /* MainViewController.swift */; };
@@ -26,8 +33,15 @@
 
 /* Begin PBXFileReference section */
 		4C6D46025CD53436292EAE07 /* Pods_WhiteNFluffyTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteNFluffyTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5519EEAD25A39AC900D0D183 /* Exo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Regular.ttf"; sourceTree = "<group>"; };
 		554760D325A15A7B0025E74A /* FullSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeViewController.swift; sourceTree = "<group>"; };
 		554760D525A359CB0025E74A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		5554EA5025A39442005A03FD /* NotoSansTC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Bold.otf"; sourceTree = "<group>"; };
+		5554EA5125A39443005A03FD /* NotoSansTC-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-ExtraBold.otf"; sourceTree = "<group>"; };
+		5554EA5225A39443005A03FD /* NotoSansTC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Regular.otf"; sourceTree = "<group>"; };
+		5554EA5425A3951C005A03FD /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		55EF74F425A0646300F8F350 /* WhiteNFluffyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteNFluffyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF74F725A0646300F8F350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55EF74F925A0646300F8F350 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +81,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5554EA5325A3944D005A03FD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5519EEAD25A39AC900D0D183 /* Exo2-ExtraBold.ttf */,
+				5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */,
+				5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */,
+				5554EA5025A39442005A03FD /* NotoSansTC-Bold.otf */,
+				5554EA5125A39443005A03FD /* NotoSansTC-ExtraBold.otf */,
+				5554EA5225A39443005A03FD /* NotoSansTC-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		55EF74EB25A0646300F8F350 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +117,7 @@
 			children = (
 				55EF750B25A0679D00F8F350 /* SupportingFiles */,
 				55EF74FB25A0646300F8F350 /* MainViewController.swift */,
+				5554EA5425A3951C005A03FD /* UIConstants.swift */,
 				55EF751825A0B02000F8F350 /* MainTableViewCell.swift */,
 				55EF750C25A06AB800F8F350 /* NetworkService.swift */,
 				55EF750E25A06D9A00F8F350 /* ApiManager.swift */,
@@ -106,6 +134,7 @@
 		55EF750B25A0679D00F8F350 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5554EA5325A3944D005A03FD /* Fonts */,
 				55EF74F725A0646300F8F350 /* AppDelegate.swift */,
 				55EF74F925A0646300F8F350 /* SceneDelegate.swift */,
 				55EF750025A0646500F8F350 /* Assets.xcassets */,
@@ -183,8 +212,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5519EEB025A39BF700D0D183 /* Exo2-ExtraBold.ttf in Resources */,
+				5519EEAC25A3990900D0D183 /* NotoSansTC-Bold.otf in Resources */,
+				5519EEAA25A3990300D0D183 /* NotoSansTC-Regular.otf in Resources */,
+				5519EEAB25A3990600D0D183 /* NotoSansTC-ExtraBold.otf in Resources */,
+				5519EEB125A39BFA00D0D183 /* Exo2-Regular.ttf in Resources */,
 				55EF750425A0646500F8F350 /* LaunchScreen.storyboard in Resources */,
 				55EF750125A0646500F8F350 /* Assets.xcassets in Resources */,
+				5519EEB225A39BFD00D0D183 /* Exo2-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +277,7 @@
 				55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */,
 				55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */,
 				55EF750F25A06D9A00F8F350 /* ApiManager.swift in Sources */,
+				5554EA5525A3951C005A03FD /* UIConstants.swift in Sources */,
 				55EF750D25A06AB800F8F350 /* NetworkService.swift in Sources */,
 				554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */,
 				55EF751125A0772200F8F350 /* LocationService.swift in Sources */,
