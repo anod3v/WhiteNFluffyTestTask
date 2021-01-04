@@ -9,48 +9,34 @@
 import UIKit
 import PromiseKit
 
-class MainViewController: UIViewController {
+class CitiesListViewController: UIViewController {
     
-    var cityNames = [
-        "Вологда",
-         "Пермь",
-        "Самара",
-//        "Севастополь",
-//        "Киев",
-//        "Орел",
-//        "Минск",
-//        "Москва",
-//        "Казань"
-    ]
+    var rootView = CitiesListMainView()
+    
+    var cityNames = [ "Вологда", "Пермь", "Самара", "Тула", "Киев", "Орел", "Минск", "Москва", "Казань", "Момбаса"]
     
     var weatherItems = [WeatherItem]()
     
-    private lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.delegate = self
-        searchBar.placeholder = "Поиск города"
-        searchBar.searchTextField.font = Fonts.regularOfSize16
-        
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        return searchBar
-    }()
-    
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.reuseId)
-        
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-    
     let weatherService = WeatherService()
+    
+    init() {
+        super.init(nibName: .none, bundle: .none)
+        setupViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        super.loadView()
+        
+        view = rootView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        setupViews()
         //        weatherService.getWeatherByCityName(cityName: "Москва").done { response in
         //            debugPrint("\(response)")
         //        }
@@ -60,7 +46,7 @@ class MainViewController: UIViewController {
                 .done { response in
                     self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
                     debugPrint(response)
-                    DispatchQueue.main.async { self.tableView.reloadData() } // TODO: to provide with better solution
+                    DispatchQueue.main.async { self.rootView.tableView.reloadData() } // TODO: to provide with better solution
             }.catch { error in
                 debugPrint(error.localizedDescription)
             }
@@ -85,30 +71,17 @@ class MainViewController: UIViewController {
     }
     
     func setupViews() {
-        self.view.addSubview(tableView)
-        self.view.addSubview(searchBar)
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableView.automaticDimension
-        updateConstraints()
-    }
-    
-    func updateConstraints() {
-        NSLayoutConstraint.activate([
-            searchBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            searchBar.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-            
-            tableView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-        ])
-
+        rootView.searchBar.delegate = self
+        rootView.tableView.dataSource = self
+        rootView.tableView.delegate = self
+        rootView.tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.reuseId)
+        rootView.tableView.estimatedRowHeight = 100
+        rootView.tableView.rowHeight = UITableView.automaticDimension
     }
     
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension CitiesListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         weatherItems.count
@@ -116,6 +89,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseId, for: indexPath) as! MainTableViewCell
+        cell.selectionStyle = .none
         let weatherItem = weatherItems[indexPath.row]
         cell.configure(weatherItem: weatherItem)
         return cell
@@ -130,7 +104,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension MainViewController: UISearchBarDelegate {
+extension CitiesListViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()

@@ -80,7 +80,7 @@ class MainTableViewCell: UITableViewCell {
             
             cityNameLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
             cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacings.ofSize20 * 2),
-            cityNameLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100 * 2),
+            cityNameLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100 * 1.3),
             cityNameLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
             
             temperatureLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),

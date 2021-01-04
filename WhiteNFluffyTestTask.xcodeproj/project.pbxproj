@@ -15,12 +15,13 @@
 		5519EEB125A39BFA00D0D183 /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */; };
 		5519EEB225A39BFD00D0D183 /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */; };
 		5519EEB425A3A03400D0D183 /* RoundCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */; };
+		5519EEB925A3D3E900D0D183 /* CitiesListMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519EEB825A3D3E900D0D183 /* CitiesListMainView.swift */; };
 		554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D325A15A7B0025E74A /* FullSizeViewController.swift */; };
 		554760D625A359CB0025E74A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D525A359CB0025E74A /* AlertService.swift */; };
 		5554EA5525A3951C005A03FD /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554EA5425A3951C005A03FD /* UIConstants.swift */; };
 		55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F725A0646300F8F350 /* AppDelegate.swift */; };
 		55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F925A0646300F8F350 /* SceneDelegate.swift */; };
-		55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74FB25A0646300F8F350 /* MainViewController.swift */; };
+		55EF74FC25A0646300F8F350 /* CitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74FB25A0646300F8F350 /* CitiesListViewController.swift */; };
 		55EF750125A0646500F8F350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EF750025A0646500F8F350 /* Assets.xcassets */; };
 		55EF750425A0646500F8F350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF750225A0646500F8F350 /* LaunchScreen.storyboard */; };
 		55EF750D25A06AB800F8F350 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF750C25A06AB800F8F350 /* NetworkService.swift */; };
@@ -38,6 +39,7 @@
 		5519EEAE25A39AC900D0D183 /* Exo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		5519EEAF25A39AC900D0D183 /* Exo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Regular.ttf"; sourceTree = "<group>"; };
 		5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersImageView.swift; sourceTree = "<group>"; };
+		5519EEB825A3D3E900D0D183 /* CitiesListMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListMainView.swift; sourceTree = "<group>"; };
 		554760D325A15A7B0025E74A /* FullSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeViewController.swift; sourceTree = "<group>"; };
 		554760D525A359CB0025E74A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		5554EA5025A39442005A03FD /* NotoSansTC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Bold.otf"; sourceTree = "<group>"; };
@@ -47,7 +49,7 @@
 		55EF74F425A0646300F8F350 /* WhiteNFluffyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteNFluffyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF74F725A0646300F8F350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55EF74F925A0646300F8F350 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55EF74FB25A0646300F8F350 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55EF74FB25A0646300F8F350 /* CitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListViewController.swift; sourceTree = "<group>"; };
 		55EF750025A0646500F8F350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55EF750325A0646500F8F350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55EF750525A0646500F8F350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,16 @@
 				C1E75CD373964C8431FA9791 /* Pods-WhiteNFluffyTestTask.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5519EEB725A3D18000D0D183 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				55EF74FB25A0646300F8F350 /* CitiesListViewController.swift */,
+				5519EEB825A3D3E900D0D183 /* CitiesListMainView.swift */,
+				554760D325A15A7B0025E74A /* FullSizeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		5554EA5325A3944D005A03FD /* Fonts */ = {
@@ -118,14 +130,13 @@
 			isa = PBXGroup;
 			children = (
 				55EF750B25A0679D00F8F350 /* SupportingFiles */,
-				55EF74FB25A0646300F8F350 /* MainViewController.swift */,
+				5519EEB725A3D18000D0D183 /* ViewControllers */,
 				5554EA5425A3951C005A03FD /* UIConstants.swift */,
 				55EF751825A0B02000F8F350 /* MainTableViewCell.swift */,
 				5519EEB325A3A03400D0D183 /* RoundCornersImageView.swift */,
 				55EF750C25A06AB800F8F350 /* NetworkService.swift */,
 				55EF750E25A06D9A00F8F350 /* ApiManager.swift */,
 				55EF751425A08C5400F8F350 /* WeatherResponse.swift */,
-				554760D325A15A7B0025E74A /* FullSizeViewController.swift */,
 				55EF751C25A0D12E00F8F350 /* WeatherItem.swift */,
 				55EF751625A090CB00F8F350 /* WeatherService.swift */,
 				554760D525A359CB0025E74A /* AlertService.swift */,
@@ -277,8 +288,9 @@
 			files = (
 				55EF751725A090CB00F8F350 /* WeatherService.swift in Sources */,
 				55EF751925A0B02000F8F350 /* MainTableViewCell.swift in Sources */,
-				55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */,
+				55EF74FC25A0646300F8F350 /* CitiesListViewController.swift in Sources */,
 				55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */,
+				5519EEB925A3D3E900D0D183 /* CitiesListMainView.swift in Sources */,
 				55EF750F25A06D9A00F8F350 /* ApiManager.swift in Sources */,
 				5554EA5525A3951C005A03FD /* UIConstants.swift in Sources */,
 				55EF750D25A06AB800F8F350 /* NetworkService.swift in Sources */,
