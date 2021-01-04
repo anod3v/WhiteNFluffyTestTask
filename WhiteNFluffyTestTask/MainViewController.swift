@@ -121,6 +121,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let fullSizeViewController = FullSizeViewController()
+        fullSizeViewController.weatherItem = weatherItems[indexPath.row]
+        self.present(fullSizeViewController, animated: true, completion: nil)
+    }
+    
     
 }
 

@@ -79,7 +79,7 @@ class MainTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             
             cityNameLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
-            cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 40),
             cityNameLabel.widthAnchor.constraint(equalToConstant: 200),
             cityNameLabel.heightAnchor.constraint(equalToConstant: 50),
             
@@ -91,7 +91,7 @@ class MainTableViewCell: UITableViewCell {
             weatherIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             weatherIcon.widthAnchor.constraint(equalToConstant: 100),
             weatherIcon.heightAnchor.constraint(equalToConstant: 100),
-            weatherIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            weatherIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -40),
             weatherIcon.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
     }
