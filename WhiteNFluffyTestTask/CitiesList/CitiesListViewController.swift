@@ -74,7 +74,7 @@ class CitiesListViewController: UIViewController {
         rootView.searchBar.delegate = self
         rootView.tableView.dataSource = self
         rootView.tableView.delegate = self
-        rootView.tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.reuseId)
+        rootView.tableView.register(CitiesListTableViewCell.self, forCellReuseIdentifier: CitiesListTableViewCell.reuseId)
         rootView.tableView.estimatedRowHeight = 100
         rootView.tableView.rowHeight = UITableView.automaticDimension
     }
@@ -88,7 +88,7 @@ extension CitiesListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseId, for: indexPath) as! MainTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CitiesListTableViewCell.reuseId, for: indexPath) as! CitiesListTableViewCell
         cell.selectionStyle = .none
         let weatherItem = weatherItems[indexPath.row]
         cell.configure(weatherItem: weatherItem)

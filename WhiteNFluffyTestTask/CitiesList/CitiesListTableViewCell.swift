@@ -9,9 +9,9 @@
 import UIKit
 import SDWebImage
 
-class MainTableViewCell: UITableViewCell {
+class CitiesListTableViewCell: UITableViewCell {
     
-    static let reuseId: String = "MainTableViewCell"
+    static let reuseId: String = "CitiesListTableViewCell"
     
     private(set) var cityNameLabel: UILabel = {
         let label = UILabel()
