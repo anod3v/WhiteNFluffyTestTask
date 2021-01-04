@@ -30,16 +30,3 @@ class LocationService {
         }
     }
 }
-//}
-//
-//func getCoordinateFrom(address: String) {
-//
-//CLGeocoder().geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
-//if((error) != nil){
-//   print("Error", error)
-//}
-//if let placemark = placemarks?.first {
-//   let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-//   }
-// })
-//}

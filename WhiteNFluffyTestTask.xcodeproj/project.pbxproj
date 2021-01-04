@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10BE7CCB653F520CAE689B63 /* Pods_WhiteNFluffyTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6D46025CD53436292EAE07 /* Pods_WhiteNFluffyTestTask.framework */; };
 		554760D425A15A7B0025E74A /* FullSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D325A15A7B0025E74A /* FullSizeViewController.swift */; };
+		554760D625A359CB0025E74A /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554760D525A359CB0025E74A /* AlertService.swift */; };
 		55EF74F825A0646300F8F350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F725A0646300F8F350 /* AppDelegate.swift */; };
 		55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74F925A0646300F8F350 /* SceneDelegate.swift */; };
 		55EF74FC25A0646300F8F350 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF74FB25A0646300F8F350 /* MainViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		4C6D46025CD53436292EAE07 /* Pods_WhiteNFluffyTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteNFluffyTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		554760D325A15A7B0025E74A /* FullSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeViewController.swift; sourceTree = "<group>"; };
+		554760D525A359CB0025E74A /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		55EF74F425A0646300F8F350 /* WhiteNFluffyTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteNFluffyTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF74F725A0646300F8F350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55EF74F925A0646300F8F350 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				554760D325A15A7B0025E74A /* FullSizeViewController.swift */,
 				55EF751C25A0D12E00F8F350 /* WeatherItem.swift */,
 				55EF751625A090CB00F8F350 /* WeatherService.swift */,
+				554760D525A359CB0025E74A /* AlertService.swift */,
 				55EF751025A0772200F8F350 /* LocationService.swift */,
 			);
 			path = WhiteNFluffyTestTask;
@@ -244,6 +247,7 @@
 				55EF751125A0772200F8F350 /* LocationService.swift in Sources */,
 				55EF751D25A0D12E00F8F350 /* WeatherItem.swift in Sources */,
 				55EF74FA25A0646300F8F350 /* SceneDelegate.swift in Sources */,
+				554760D625A359CB0025E74A /* AlertService.swift in Sources */,
 				55EF751525A08C5400F8F350 /* WeatherResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

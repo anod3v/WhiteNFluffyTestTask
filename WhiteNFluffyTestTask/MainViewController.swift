@@ -13,14 +13,14 @@ class MainViewController: UIViewController {
     
     var cityNames = [
         "Вологда",
-         "Пермь",
+        "Пермь",
         "Самара",
-//        "Севастополь",
-//        "Киев",
-//        "Орел",
-//        "Минск",
-//        "Москва",
-//        "Казань"
+        //        "Севастополь",
+        //        "Киев",
+        //        "Орел",
+        //        "Минск",
+        //        "Москва",
+        //        "Казань"
     ]
     
     var weatherItems = [WeatherItem]()
@@ -56,11 +56,18 @@ class MainViewController: UIViewController {
         cityNames.forEach({
             let cityName = $0
             weatherService.getWeatherByCityName(cityName: cityName)
-                .done { response in
+                .done {
+                    response in
                     self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
                     debugPrint(response)
                     DispatchQueue.main.async { self.tableView.reloadData() } // TODO: to provide with better solution
-            }.catch { error in
+            }
+//            .tap { result in
+//                if case .rejected = result {
+//                    AlertService.showLocationNotFoundAlert(viewController: self)
+//                }
+//            }
+                .catch(policy: .allErrors) { error in
                 debugPrint(error.localizedDescription)
             }
         })
@@ -70,12 +77,12 @@ class MainViewController: UIViewController {
     func prepareToShowFullSize(cityName: String) {
         guard !cityNames.contains(cityName) else { return } // TODO: improve
         weatherService.getWeatherByCityName(cityName: cityName)
-        .done { response in
-            let fullSizeViewController = FullSizeViewController()
-            fullSizeViewController.weatherItem = WeatherItem(name: cityName, weatherResponse: response)
-            DispatchQueue.main.async {
-                self.present(fullSizeViewController, animated: true, completion: nil)
-            }
+            .done { response in
+                let fullSizeViewController = FullSizeViewController()
+                fullSizeViewController.weatherItem = WeatherItem(name: cityName, weatherResponse: response)
+                DispatchQueue.main.async {
+                    self.present(fullSizeViewController, animated: true, completion: nil)
+                }
         }
     }
     
@@ -98,7 +105,7 @@ class MainViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
         ])
-
+        
     }
     
 }

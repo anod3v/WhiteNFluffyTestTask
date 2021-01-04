@@ -22,10 +22,14 @@ class WeatherService: NetworkService {
     }
     
     func getWeatherByCityName(cityName: String) -> Promise<WeatherResponse> {
-        firstly{
+        let promise = firstly{
         locationService.getCoordinateFrom(address: cityName)
         }.then { location in
             self.getWeatherByCityLocation(coordinate: location)
         }
+        promise.catch { error in
+            debugPrint(error.localizedDescription)
+        }
+        return promise
     }
 }
