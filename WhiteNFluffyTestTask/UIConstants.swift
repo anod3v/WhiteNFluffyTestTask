@@ -17,9 +17,11 @@ struct Fonts {
     static let semiBoldOfSize14 = UIFont(name: "Exo2-SemiBold", size: 14)
     static let semiBoldOfSize16 = UIFont(name: "Exo2-SemiBold", size: 16)
     static let semiBoldOfSize18 = UIFont(name: "Exo2-SemiBold", size: 18)
+    static let semiBoldOfSize25 = UIFont(name: "Exo2-SemiBold", size: 25)
     static let extraBoldOfSize14 = UIFont(name: "Exo2-ExtraBold", size: 14)
     static let extraBoldOfSize16 = UIFont(name: "Exo2-ExtraBold", size: 16)
     static let extraBoldOfSize18 = UIFont(name: "Exo2-ExtraBold", size: 18)
+    static let extraBoldOfSize25 = UIFont(name: "Exo2-ExtraBold", size: 25)
 }
 
 struct Spacings {

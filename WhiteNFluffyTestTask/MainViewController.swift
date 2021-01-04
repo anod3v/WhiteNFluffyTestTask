@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
         let searchBar = UISearchBar()
         searchBar.delegate = self
         searchBar.placeholder = "Поиск города"
+        searchBar.searchTextField.font = Fonts.regularOfSize16
         
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         return searchBar
@@ -48,7 +49,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = .systemBackground
         setupViews()
         //        weatherService.getWeatherByCityName(cityName: "Москва").done { response in
         //            debugPrint("\(response)")

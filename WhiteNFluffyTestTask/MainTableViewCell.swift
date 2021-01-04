@@ -15,10 +15,10 @@ class MainTableViewCell: UITableViewCell {
     
     private(set) var cityNameLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.extraBoldOfSize18
+        label.font = Fonts.semiBoldOfSize25
         label.numberOfLines = 1
         label.sizeToFit()
-        label.backgroundColor = .green
+//        label.backgroundColor = .green
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -26,9 +26,10 @@ class MainTableViewCell: UITableViewCell {
     
     private(set) var temperatureLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.extraBoldOfSize18
+        label.font = Fonts.extraBoldOfSize25
         label.numberOfLines = 1
-        label.backgroundColor = .cyan
+        label.textAlignment = .center
+//        label.backgroundColor = .cyan
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -62,7 +63,12 @@ class MainTableViewCell: UITableViewCell {
     
     func configure(weatherItem: WeatherItem) {
         cityNameLabel.text = weatherItem.name
-        temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temp)"
+        switch weatherItem.weatherResponse.fact.temp {
+        case _ where weatherItem.weatherResponse.fact.temp > 0:
+            temperatureLabel.text = "+\(weatherItem.weatherResponse.fact.temp) ℃"
+        default:
+            temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temp) ℃"
+        }
         weatherIcon.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let iconURL = "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"
         weatherIcon.sd_setImage(with: URL(string: iconURL), placeholderImage: UIImage(named: "placeholder.png"))
