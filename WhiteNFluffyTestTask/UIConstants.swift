@@ -25,8 +25,7 @@ struct Fonts {
 }
 
 struct Spacings {
-    static let ofSize4: CGFloat = 4
-    static let ofSize8: CGFloat = 8
     static let ofSize10: CGFloat = 10
+    static let ofSize20: CGFloat = 20
     static let ofSize100: CGFloat = 100
 }

@@ -63,11 +63,11 @@ class MainTableViewCell: UITableViewCell {
     
     func configure(weatherItem: WeatherItem) {
         cityNameLabel.text = weatherItem.name
-        switch weatherItem.weatherResponse.fact.temp {
-        case _ where weatherItem.weatherResponse.fact.temp > 0:
-            temperatureLabel.text = "+\(weatherItem.weatherResponse.fact.temp) ℃"
+        switch weatherItem.weatherResponse.fact.temperature {
+        case _ where weatherItem.weatherResponse.fact.temperature > 0:
+            temperatureLabel.text = "+\(weatherItem.weatherResponse.fact.temperature) ℃"
         default:
-            temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temp) ℃"
+            temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temperature) ℃"
         }
         weatherIcon.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let iconURL = "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"
@@ -79,20 +79,20 @@ class MainTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             
             cityNameLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
-            cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 40),
-            cityNameLabel.widthAnchor.constraint(equalToConstant: 200),
-            cityNameLabel.heightAnchor.constraint(equalToConstant: 50),
+            cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacings.ofSize20 * 2),
+            cityNameLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100 * 2),
+            cityNameLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
             
             temperatureLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
-            temperatureLabel.widthAnchor.constraint(equalToConstant: 100),
-            temperatureLabel.heightAnchor.constraint(equalToConstant: 50),
-            temperatureLabel.trailingAnchor.constraint(equalTo: weatherIcon.leadingAnchor, constant: -20),
+            temperatureLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100),
+            temperatureLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
+            temperatureLabel.trailingAnchor.constraint(equalTo: weatherIcon.leadingAnchor, constant: -Spacings.ofSize20),
             
-            weatherIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            weatherIcon.widthAnchor.constraint(equalToConstant: 100),
-            weatherIcon.heightAnchor.constraint(equalToConstant: 100),
-            weatherIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -40),
-            weatherIcon.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
+            weatherIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Spacings.ofSize20),
+            weatherIcon.widthAnchor.constraint(equalToConstant: Spacings.ofSize100),
+            weatherIcon.heightAnchor.constraint(equalToConstant: Spacings.ofSize100),
+            weatherIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Spacings.ofSize20 * 2),
+            weatherIcon.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Spacings.ofSize20)
         ])
     }
 }

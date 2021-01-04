@@ -16,6 +16,8 @@ class AlertService {
 
         alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: { () in
                 }))
+        alertVC.alertTitle.font = Fonts.extraBoldOfSize18
+        alertVC.alertDescription.font = Fonts.regularOfSize18
         
         viewController.present(alertVC, animated: true, completion: nil)
         

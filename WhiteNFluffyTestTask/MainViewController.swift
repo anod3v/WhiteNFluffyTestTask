@@ -93,7 +93,7 @@ class MainViewController: UIViewController {
     }
     
     func updateConstraints() {
-        NSLayoutConstraint.activate([ // TODO: add to the tableView header
+        NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             searchBar.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),

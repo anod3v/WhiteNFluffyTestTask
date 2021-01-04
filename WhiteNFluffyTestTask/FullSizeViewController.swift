@@ -103,13 +103,13 @@ class FullSizeViewController: UIViewController {
     func configureViews() {
         guard let weatherItem = self.weatherItem else { return }
         cityNameLabel.text = weatherItem.name
-        switch weatherItem.weatherResponse.fact.temp {
-        case _ where weatherItem.weatherResponse.fact.temp > 0:
-            temperatureLabel.text = "+\(weatherItem.weatherResponse.fact.temp) ℃"
+        switch weatherItem.weatherResponse.fact.temperature {
+        case _ where weatherItem.weatherResponse.fact.temperature > 0:
+            temperatureLabel.text = "+\(weatherItem.weatherResponse.fact.temperature) ℃"
         default:
-            temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temp) ℃"
+            temperatureLabel.text = "\(weatherItem.weatherResponse.fact.temperature) ℃"
         }
-        temperatureFeelsLikeLabel.text = "ощущается как \(weatherItem.weatherResponse.fact.feelsLike) ℃"
+        temperatureFeelsLikeLabel.text = "ощущается как \(weatherItem.weatherResponse.fact.temperatureFeelsLike) ℃"
         weatherIcon.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let iconURL = "https://yastatic.net/weather/i/icons/blueye/color/svg/\(weatherItem.weatherResponse.fact.icon).svg"
         weatherIcon.sd_setImage(with: URL(string: iconURL), placeholderImage: UIImage(named: "placeholder.png"))
@@ -125,18 +125,18 @@ class FullSizeViewController: UIViewController {
             temperatureLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
             temperatureLabel.centerXAnchor.constraint(equalTo: weatherIcon.centerXAnchor),
             
-            weatherIcon.topAnchor.constraint(equalTo: cityNameLabel.bottomAnchor, constant: 20),
+            weatherIcon.topAnchor.constraint(equalTo: cityNameLabel.bottomAnchor, constant: Spacings.ofSize20),
             weatherIcon.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            weatherIcon.widthAnchor.constraint(equalToConstant: 200),
+            weatherIcon.widthAnchor.constraint(equalToConstant: Spacings.ofSize100 * 2),
             weatherIcon.heightAnchor.constraint(equalTo: weatherIcon.widthAnchor),
             
-            temperatureFeelsLikeLabel.topAnchor.constraint(equalTo: weatherIcon.bottomAnchor, constant: 20),
+            temperatureFeelsLikeLabel.topAnchor.constraint(equalTo: weatherIcon.bottomAnchor, constant: Spacings.ofSize20),
             temperatureFeelsLikeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            humidityLabel.topAnchor.constraint(equalTo: temperatureFeelsLikeLabel.bottomAnchor, constant: 20),
+            humidityLabel.topAnchor.constraint(equalTo: temperatureFeelsLikeLabel.bottomAnchor, constant: Spacings.ofSize20),
             humidityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            pressureLabel.topAnchor.constraint(equalTo: humidityLabel.bottomAnchor, constant: 20),
+            pressureLabel.topAnchor.constraint(equalTo: humidityLabel.bottomAnchor, constant: Spacings.ofSize20),
             pressureLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
         ])
