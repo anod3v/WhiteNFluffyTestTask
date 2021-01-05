@@ -15,7 +15,6 @@ class FullSizeMainView: UIView {
         label.font = Fonts.extraBoldOfSize25
         label.numberOfLines = 1
         label.sizeToFit()
-        //        label.backgroundColor = .green
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +27,6 @@ class FullSizeMainView: UIView {
         label.textColor = .white
         label.numberOfLines = 1
         label.sizeToFit()
-        //        label.backgroundColor = .green
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +38,6 @@ class FullSizeMainView: UIView {
         label.font = Fonts.regularOfSize16
         label.numberOfLines = 1
         label.sizeToFit()
-        //        label.backgroundColor = .green
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -51,8 +48,7 @@ class FullSizeMainView: UIView {
         let label = UILabel()
         label.font = Fonts.regularOfSize16
         label.numberOfLines = 1
-        label.sizeToFit() // TODO: check if required
-        //        label.backgroundColor = .green
+        label.sizeToFit()
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -63,8 +59,7 @@ class FullSizeMainView: UIView {
         let label = UILabel()
         label.font = Fonts.regularOfSize16
         label.numberOfLines = 1
-        label.sizeToFit() // TODO: check if required
-        //        label.backgroundColor = .green
+        label.sizeToFit()
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +68,6 @@ class FullSizeMainView: UIView {
     
     private(set) var weatherIcon: RoundCornersImageView = {
         let view = RoundCornersImageView(frame: .zero)
-        //        view.contentMode = .scaleAspectFill
         view.backgroundColor = #colorLiteral(red: 1, green: 0.3864146769, blue: 0.4975627065, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true

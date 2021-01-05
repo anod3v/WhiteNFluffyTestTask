@@ -37,36 +37,34 @@ class CitiesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        //        weatherService.getWeatherByCityName(cityName: "Москва").done { response in
-        //            debugPrint("\(response)")
-        //        }
+        
         cityNames.forEach({
             let cityName = $0
             weatherService.getWeatherByCityName(cityName: cityName)
                 .done { response in
                     self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
                     debugPrint(response)
-                    DispatchQueue.main.async { self.rootView.tableView.reloadData() } // TODO: to provide with better solution
+                    DispatchQueue.main.async { self.rootView.tableView.reloadData() }
             }.catch { error in
                 debugPrint(error.localizedDescription)
             }
         })
         
         weatherService.locationService.locationErrorCallback = { [weak self] locationError in
-        guard let self = self else { return }
+            guard let self = self else { return }
             AlertService.showLocationNotFoundAlert(viewController: self)
-    }
+        }
     }
     
     func prepareToShowFullSize(cityName: String) {
-        guard !cityNames.contains(cityName) else { return } // TODO: improve
+        guard !cityNames.contains(cityName) else { return }
         weatherService.getWeatherByCityName(cityName: cityName)
-        .done { response in
-            let fullSizeViewController = FullSizeViewController()
-            fullSizeViewController.weatherItem = WeatherItem(name: cityName, weatherResponse: response)
-            DispatchQueue.main.async {
-                self.present(fullSizeViewController, animated: true, completion: nil)
-            }
+            .done { response in
+                let fullSizeViewController = FullSizeViewController()
+                fullSizeViewController.weatherItem = WeatherItem(name: cityName, weatherResponse: response)
+                DispatchQueue.main.async {
+                    self.present(fullSizeViewController, animated: true, completion: nil)
+                }
         }
     }
     
@@ -75,7 +73,7 @@ class CitiesListViewController: UIViewController {
         rootView.tableView.dataSource = self
         rootView.tableView.delegate = self
         rootView.tableView.register(CitiesListTableViewCell.self, forCellReuseIdentifier: CitiesListTableViewCell.reuseId)
-        rootView.tableView.estimatedRowHeight = 100
+        rootView.tableView.estimatedRowHeight = 150
         rootView.tableView.rowHeight = UITableView.automaticDimension
     }
     

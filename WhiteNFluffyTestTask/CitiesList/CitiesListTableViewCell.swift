@@ -18,7 +18,6 @@ class CitiesListTableViewCell: UITableViewCell {
         label.font = Fonts.semiBoldOfSize25
         label.numberOfLines = 1
         label.sizeToFit()
-//        label.backgroundColor = .green
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,7 +28,6 @@ class CitiesListTableViewCell: UITableViewCell {
         label.font = Fonts.extraBoldOfSize25
         label.numberOfLines = 1
         label.textAlignment = .center
-//        label.backgroundColor = .cyan
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -37,7 +35,6 @@ class CitiesListTableViewCell: UITableViewCell {
     
     private(set) var weatherIcon: RoundCornersImageView = {
             let view = RoundCornersImageView(frame: .zero)
-    //        view.contentMode = .scaleAspectFill
             view.backgroundColor = #colorLiteral(red: 1, green: 0.3864146769, blue: 0.4975627065, alpha: 1)
             view.translatesAutoresizingMaskIntoConstraints = false
             view.clipsToBounds = true
@@ -46,7 +43,6 @@ class CitiesListTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        self.contentView.backgroundColor = .brown
         addViews()
         setupConstraints()
     }
@@ -81,11 +77,11 @@ class CitiesListTableViewCell: UITableViewCell {
             cityNameLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
             cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacings.ofSize20 * 2),
             cityNameLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100 * 1.3),
-            cityNameLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
+//            cityNameLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
             
             temperatureLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
             temperatureLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100),
-            temperatureLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
+//            temperatureLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
             temperatureLabel.trailingAnchor.constraint(equalTo: weatherIcon.leadingAnchor, constant: -Spacings.ofSize20),
             
             weatherIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Spacings.ofSize20),
