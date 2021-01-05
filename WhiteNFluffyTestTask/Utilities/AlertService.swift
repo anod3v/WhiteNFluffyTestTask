@@ -12,7 +12,7 @@ import PMAlertController
 class AlertService {
     static func showLocationNotFoundAlert(viewController: UIViewController) {
         
-        let alertVC = PMAlertController(title: "Город не найден", description: "Населенный пункт, который вы указали, не найден", image: UIImage(named: "sadCloud.png"), style: .alert)
+        let alertVC = PMAlertController(title: "Город не найден", description: "Проверьте правильность написания, либо укажите другой город", image: UIImage(named: "sadCloud.png"), style: .alert)
 
         alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: { () in
                 }))
