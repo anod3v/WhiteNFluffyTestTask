@@ -72,8 +72,6 @@ class CitiesListViewController: UIViewController {
         rootView.tableView.dataSource = self
         rootView.tableView.delegate = self
         rootView.tableView.register(CitiesListTableViewCell.self, forCellReuseIdentifier: CitiesListTableViewCell.reuseId)
-        rootView.tableView.estimatedRowHeight = 150
-        rootView.tableView.rowHeight = UITableView.automaticDimension
     }
     
 }
