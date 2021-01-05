@@ -10,7 +10,7 @@ import UIKit
 
 class RoundCornersImageView: UIImageView {
     
-    var radius: CGFloat = 0
+    private(set) var radius: CGFloat = 0
     
     init(frame: CGRect, cornerRadius: CGFloat) {
         super.init(frame: frame)

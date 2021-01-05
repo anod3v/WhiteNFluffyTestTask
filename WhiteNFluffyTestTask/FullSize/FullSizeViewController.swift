@@ -13,7 +13,7 @@ class FullSizeViewController: UIViewController {
     
     var weatherItem: WeatherItem?
     
-    var rootView = FullSizeMainView()
+    private(set) var rootView = FullSizeMainView()
     
     init() {
         super.init(nibName: .none, bundle: .none)

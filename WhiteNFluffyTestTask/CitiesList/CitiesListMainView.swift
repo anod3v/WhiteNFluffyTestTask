@@ -10,7 +10,7 @@ import UIKit
 
 class CitiesListMainView: UIView {
     
-    var searchBar: UISearchBar = {
+    private(set) var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Поиск города"
         searchBar.searchTextField.font = Fonts.regularOfSize16
@@ -19,7 +19,7 @@ class CitiesListMainView: UIView {
         return searchBar
     }()
     
-    var tableView: UITableView = {
+    private(set) var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false

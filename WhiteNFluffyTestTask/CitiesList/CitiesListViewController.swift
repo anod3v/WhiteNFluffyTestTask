@@ -11,13 +11,13 @@ import PromiseKit
 
 class CitiesListViewController: UIViewController {
     
-    var rootView = CitiesListMainView()
+    private(set) var rootView = CitiesListMainView()
     
-    var cityNames = [ "Вологда", "Пермь", "Самара", "Тула", "Киев", "Орел", "Минск", "Москва", "Казань", "Момбаса"]
+    private(set) var cityNames = [ "Вологда", "Пермь", "Самара", "Тула", "Киев", "Орел", "Минск", "Москва", "Казань", "Момбаса"]
     
-    var weatherItems = [WeatherItem]()
+    private(set) var weatherItems = [WeatherItem]()
     
-    let weatherService = WeatherService()
+    private let weatherService = WeatherService()
     
     init() {
         super.init(nibName: .none, bundle: .none)
