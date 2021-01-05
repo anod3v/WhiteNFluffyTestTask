@@ -77,11 +77,9 @@ class CitiesListTableViewCell: UITableViewCell {
             cityNameLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
             cityNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacings.ofSize20 * 2),
             cityNameLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100 * 1.3),
-//            cityNameLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
             
             temperatureLabel.centerYAnchor.constraint(equalTo: weatherIcon.centerYAnchor),
             temperatureLabel.widthAnchor.constraint(equalToConstant: Spacings.ofSize100),
-//            temperatureLabel.heightAnchor.constraint(equalToConstant: Spacings.ofSize20 * 2),
             temperatureLabel.trailingAnchor.constraint(equalTo: weatherIcon.leadingAnchor, constant: -Spacings.ofSize20),
             
             weatherIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Spacings.ofSize20),
