@@ -43,7 +43,6 @@ class CitiesListViewController: UIViewController {
             weatherService.getWeatherByCityName(cityName: cityName)
                 .done { response in
                     self.weatherItems.append(WeatherItem(name: cityName, weatherResponse: response))
-                    debugPrint(response)
                     DispatchQueue.main.async { self.rootView.tableView.reloadData() }
             }.catch { error in
                 debugPrint(error.localizedDescription)

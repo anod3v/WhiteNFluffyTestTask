@@ -30,7 +30,6 @@ class NetworkService {
         var request = URLRequest(url: urlConstructor.url!)
         request.allHTTPHeaderFields = [keyHeader: ApiManager.session.accessKey]
         let session = URLSession(configuration: configuration)
-        debugPrint(urlConstructor.url!)
         
         return Promise { seal in
             let task = session.dataTask(with: request) { (data, response, apiError) in
@@ -45,7 +44,6 @@ class NetworkService {
                     let response = try decoder.decode(Output.self, from: data!)
                     seal.fulfill(response)
                 } catch let decodingError {
-//                    ApiManager.session.eraseAll()
                     debugPrint(decodingError)
                     seal.reject(decodingError)
                 }

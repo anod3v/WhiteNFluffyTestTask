@@ -31,16 +31,5 @@ class WeatherService: NetworkService {
             debugPrint(error.localizedDescription)
         }
         return promise
-//        return Promise { seal in
-//            firstly {
-//                locationService.getCoordinateFrom(address: cityName)
-//            }.then { location in
-//                self.getWeatherByCityLocation(coordinate: location)
-//            }.done { response in
-//                seal.fulfill(response)
-//            }.catch { error in
-//                seal.reject(error)
-//            }
-//        }
     }
 }
